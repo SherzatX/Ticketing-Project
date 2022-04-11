@@ -89,7 +89,7 @@
                                                         <input type="radio" name="radio-inline" th:field="*{gender}" th:value="Male" class="custom-control-input"><span class="custom-control-label">Male</span>
                                                     </label>
                                                     <label class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="radio-inline" th:field="*{gender}" th:value="Female class="custom-control-input"><span class="custom-control-label">Female</span>
+                                                        <input type="radio" name="radio-inline" th:field="*{gender}" th:value="Female" class="custom-control-input"><span class="custom-control-label">Female</span>
                                                     </label>
 
                                                 </div>
@@ -100,7 +100,7 @@
                                                     <label>Choose a Role</label>
                                                     <select name="role" th:field="*{role}" class="custom-select">
                                                         <option th:value="''" th:text="Select"></option>
-                                                        <option th:each="role : ${}"></option>
+                                                        <option th:each="role : ${roles} " th:value="${role.id}" th:text="${role.description}"></option>
                                                     </select>
                                                 </div>
                                             </div>
